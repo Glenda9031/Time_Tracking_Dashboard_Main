@@ -179,15 +179,168 @@ main {
     border-radius: 50%;
 }
 
+.profile__bottom {
+    padding: var(--padding-main);
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+}
 
+.profile__bottom a:link {
+    color: var(--clr-primary-500);
+    text-decoration: none;
+}
 
+.profile__bottom a:visited {
+    color: var(--clr-primary-500);
+}
 
+.profile__bottom a:hover {
+    color: var(--clr-primary-100);
+}
 
+.activated:visited:not(:hover) {
+    color: var(--clr-primary-100);
+}
 
+.card {
+    display: grid;
+    bottom-top-left-radius: var(--border-radius);
+    bottom-top-right-radius: var(--border-radius);
+    bottom-top-left-radius: calc(var(--border-radius) * 2);
+    bottom-top-right-radius: calc(var(--border-radius) * 2);
+}
 
+.card-top {
+    min-height: 2.875rem;
+    margin-right: 1rem;
+}
 
+.card-bottom {
+    background-color: var(--clr-primary-800);
+    border-radius: 1rem;
+    padding: var(--padding-main);
+    z-index: 999;
+}
 
+.card h2 {
+    font-size: var(--fs-400);
+}
 
+.card h3 {
+    font-size: var(--fs-700);
+}
 
+.card p {
+    font-size: var(--fs-300);
+}
 
+.card-top {
+    background-repeat: no-repeat;
+    background-position: right 0 top -10px;
+}
+
+.work-card .card-top {
+    background-image: url('../images/icon-work.svg');
+}
+
+.play-card .card-top {
+    background-image: url('../images/icon-play.svg');
+}
+
+.study-card .card-top {
+    background-image: url('../images/icon-study.svg');
+}
+
+.exercise-card .card-top {
+    background-image: url('../images/icon-exercise.svg');
+    background-position: right 0 top 0px;
+}
+
+.social-card .card-top {
+    background-image: url('../images/icon-social.svg');
+}
+
+.self-care-card .card-top {
+    background-image: url('../images/icon-self-care.svg');
+}
+
+.card-bottom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-type {
+    font-weight: var(--fw-regular);
+}
+
+.button {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.button .dots {
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: .375rem;
+    left: .5rem;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    display: block;
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: var(--clr-primary-100);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.button::before {
+    top: .375rem;
+    left: 0;
+}
+
+.button::after {
+    top: .375rem;
+    right: 0;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card-bottom-container h3 {
+    line-height: 1.2;
+    font-weight: var(--fw-light);
+}
+
+.card-bottom-container p {
+    color: var(--clr-primary-500);
+}
+
+.tilt-card {
+    transition: transform 0.3s;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+}
 
